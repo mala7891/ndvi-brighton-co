@@ -51,21 +51,8 @@ The final deliverables for this project will include:
 * Comprehensive report: A detailed report summarizing the findings, interpretations, and recommendations based on the NDVI analysis. This report will also include historical and ecological context for the selected areas.
 * Presentation materials: Presentation slides or visual aids to communicate the project's key findings and recommendations to stakeholders and decision-makers.
 
-# Project Timeline
-The project timeline will vary depending on the availability of satellite data, the complexity of the analysis, and the scale of the selected areas. However, a general timeline could be as follows:
-
-* Data Collection: 2 weeks
-* Preprocessing and Analysis: 2 weeks
-* NDVI Map Generation: 1 week
-* Interpretation and Analysis: 2 weeks
-* Documentation and Reporting: 2 weeks
-* Presentation and Discussion: 1 week
-* Integration and Decision-making: Ongoing
-(Please note that this timeline is tentative and subject to adjustment based on specific project requirements and constraints)
-
 # Tools/Packages Required
 To run the workflow, you will need the following tools/packages:
-
 * Python (version 3.0 or higher)
 * os
 * rioxarray
