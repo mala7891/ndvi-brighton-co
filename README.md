@@ -3,10 +3,13 @@
 # Introduction
 This README file provides an overview of a capstone project focused on enhancing the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. The project aims to analyze satellite data and create custom NDVI (Normalized Difference Vegetation Index) maps for five specific areas in Brighton. These maps will assist decision-makers in making informed choices about managing and preserving these properties to withstand the immediate effects of climate change.
 
-# In This Repository
+# In This Repository:
+* README.md
 * LICENSE.txt
-* .gitignore
-* "notebooks" folder
+* .gitignore file
+* "notebooks" folder containing:
+*   - ndvi_brighton_co.html
+*   - ndvi_brighton_co.ipynb
 
 # Project Objectives
 The primary objectives of this project are as follows:
