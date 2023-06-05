@@ -54,13 +54,13 @@ The final deliverables for this project will include:
 # Project Timeline
 The project timeline will vary depending on the availability of satellite data, the complexity of the analysis, and the scale of the selected areas. However, a general timeline could be as follows:
 
-Data Collection: 2 weeks
-Preprocessing and Analysis: 2 weeks
-NDVI Map Generation: 1 week
-Interpretation and Analysis: 2 weeks
-Documentation and Reporting: 2 weeks
-Presentation and Discussion: 1 week
-Integration and Decision-making: Ongoing
+* Data Collection: 2 weeks
+* Preprocessing and Analysis: 2 weeks
+* NDVI Map Generation: 1 week
+* Interpretation and Analysis: 2 weeks
+* Documentation and Reporting: 2 weeks
+* Presentation and Discussion: 1 week
+* Integration and Decision-making: Ongoing
 (Please note that this timeline is tentative and subject to adjustment based on specific project requirements and constraints)
 
 # Tools/Packages Required
