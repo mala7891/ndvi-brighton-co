@@ -1,6 +1,6 @@
 # ndvi-brighton-co
 
-## CU Boulder Earth Data Analytics Professional Certificate
+## CU Boulder Earth Data Analytics Professional Graduate Certificate
 ### Summer 2023 Capstone Project:
 
 # Visualizing Percent Change in NDVI Land Cover to Measure Vegetation Health in Brighton, Colorado
