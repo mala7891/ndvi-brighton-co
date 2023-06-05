@@ -8,8 +8,8 @@ This README file provides an overview of a capstone project focused on enhancing
 * LICENSE.txt
 * .gitignore file
 * "notebooks" folder containing:
-*   - ndvi_brighton_co.html
-*   - ndvi_brighton_co.ipynb
+- ndvi_brighton_co.html
+- ndvi_brighton_co.ipynb
 
 # Project Objectives
 The primary objectives of this project are as follows:
