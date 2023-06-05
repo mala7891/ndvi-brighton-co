@@ -6,10 +6,10 @@ This README file provides an overview of a capstone project focused on enhancing
 # Project Objectives
 The primary objectives of this project are as follows:
 
-Analyze satellite data: Collect and process satellite imagery to obtain relevant data for the selected areas in Brighton, Colorado.
-Generate custom NDVI maps: Utilize the Normalized Difference Vegetation Index (NDVI) to produce maps that depict vegetation density and health.
-Enhance historical and ecological understanding: Provide decision-makers with valuable insights into the historical and ecological conditions of the selected areas, aiding in informed decision-making and resource management.
-Support sustainable landscape management: Enable the prioritization of conservation practices, effective monitoring, and evaluation of progress towards sustainability and climate resilience goals within the city.
+* Analyze satellite data: Collect and process satellite imagery to obtain relevant data for the selected areas in Brighton, Colorado.
+* Generate custom NDVI maps: Utilize the Normalized Difference Vegetation Index (NDVI) to produce maps that depict vegetation density and health.
+* Enhance historical and ecological understanding: Provide decision-makers with valuable insights into the historical and ecological conditions of the selected areas, aiding in informed decision-making and resource management.
+* Support sustainable landscape management: Enable the prioritization of conservation practices, effective monitoring, and evaluation of progress towards sustainability and climate resilience goals within the city.
 
 # Purpose
 The purpose of this repository is to provide a workflow for custom NDVI mapping using Landsat imagery data. It includes code and instructions on how to process satellite data, calculate NDVI, classify land cover, and calculate the percent change of land cover between two time periods.
@@ -20,11 +20,11 @@ One unique contribution of this project repository to data science and earth/env
 
 Someone would want to use the code/workflow presented in this repository for several reasons:
 
-It provides a standardized and replicable approach for processing Landsat imagery and calculating NDVI, making it easier for researchers, horticulturists, and decision-makers to analyze vegetation dynamics.
-The workflow enables the classification of land cover based on NDVI values, allowing users to identify different vegetation types or land cover classes within the study area.
-The calculation of percent change of land cover between two time periods provides insights into vegetation changes over time, aiding in monitoring and assessing the effects of environmental changes and climate resilience.
-The workflow includes visualization capabilities, allowing users to generate maps and visual representations of NDVI, land cover classifications, and percent change of land cover, facilitating data interpretation and communication of findings.
-Overall, this code/workflow is valuable for professionals working in the field of environmental science, horticulture, land management, or anyone interested in analyzing and monitoring vegetation dynamics using Landsat imagery.
+* It provides a standardized and replicable approach for processing Landsat imagery and calculating NDVI, making it easier for researchers, horticulturists, and decision-makers to analyze vegetation dynamics.
+* The workflow enables the classification of land cover based on NDVI values, allowing users to identify different vegetation types or land cover classes within the study area.
+* The calculation of percent change of land cover between two time periods provides insights into vegetation changes over time, aiding in monitoring and assessing the effects of environmental changes and climate resilience.
+* The workflow includes visualization capabilities, allowing users to generate maps and visual representations of NDVI, land cover classifications, and percent change of land cover, facilitating data interpretation and communication of findings.
+* Overall, this code/workflow is valuable for professionals working in the field of environmental science, horticulture, land management, or anyone interested in analyzing and monitoring vegetation dynamics using Landsat imagery.
 
 # Project Steps
 To achieve the project objectives, the following steps will be undertaken:
@@ -47,9 +47,9 @@ Collaborate with decision-makers to integrate the acquired knowledge into munici
 # Project Deliverables
 The final deliverables for this project will include:
 
-Custom NDVI maps: Maps depicting the vegetation density and health for the selected areas in Brighton, Colorado.
-Comprehensive report: A detailed report summarizing the findings, interpretations, and recommendations based on the NDVI analysis. This report will also include historical and ecological context for the selected areas.
-Presentation materials: Presentation slides or visual aids to communicate the project's key findings and recommendations to stakeholders and decision-makers.
+* Custom NDVI maps: Maps depicting the vegetation density and health for the selected areas in Brighton, Colorado.
+* Comprehensive report: A detailed report summarizing the findings, interpretations, and recommendations based on the NDVI analysis. This report will also include historical and ecological context for the selected areas.
+* Presentation materials: Presentation slides or visual aids to communicate the project's key findings and recommendations to stakeholders and decision-makers.
 
 # Project Timeline
 The project timeline will vary depending on the availability of satellite data, the complexity of the analysis, and the scale of the selected areas. However, a general timeline could be as follows:
@@ -66,12 +66,13 @@ Integration and Decision-making: Ongoing
 # Tools/Packages Required
 To run the workflow, you will need the following tools/packages:
 
-Python (version 3.0 or higher)
-rioxarray
-geopandas
-earthpy
-numpy
-matplotlib
+* Python (version 3.0 or higher)
+* os
+* rioxarray
+* geopandas
+* earthpy
+* numpy
+* matplotlib
 
 # Data Formats and Types
 To apply this workflow, you need Landsat imagery data in GeoTIFF format. The Landsat imagery should contain the necessary bands, specifically the red and near-infrared (NIR) bands.
