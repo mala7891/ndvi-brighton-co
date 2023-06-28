@@ -104,3 +104,4 @@ You can explore other reputable data sources or satellite data repositories that
 # Conclusion
 This project aims to enhance the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. By analyzing satellite data and generating custom NDVI maps, decision-makers will gain valuable insights into vegetation density and health, promoting informed choices regarding sustainable landscape management and climate resilience. This project contributes to the broader goal of creating a healthier and more sustainable city by balancing conservation, resource use, and maintaining ecosystem services.
 
+[![DOI](https://zenodo.org/badge/{github_id}.svg)](https://zenodo.org/badge/latestdoi/{github_id})
