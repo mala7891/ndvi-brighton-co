@@ -78,8 +78,8 @@ To run the workflow, you will need the following tools/packages:
 # Install the Earth Analytics Python Conda Environment
 To install the earth-analytics-python environment, you will need to follow these steps:
 
-Fork and clone a GitHub repository from https://github.com/earthlab/earth-analytics-python-env to your earth-analytics directory.
-This repository contains a file called environment.yml that contains the instructions to install the environment.
+Fork and clone a GitHub repository from https://github.com/earthlab/earth-analytics-python-env to your own directory (such as "earth-analytics-python-env").
+This repository also contains instructions to install the environment, as well as on the Earth Data Science textbook website: https://www.earthdatascience.org/workshops/setup-earth-analytics-python/
 
 1. In the Terminal, set your directory to the cloned earth-analytics-python-env dir using "cd" to change directories (e.g. "cd earth-analytics-python-env)".
 
