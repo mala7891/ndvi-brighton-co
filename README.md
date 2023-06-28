@@ -15,6 +15,7 @@ This README file provides an overview of a capstone project focused on enhancing
 * "notebooks" folder containing:
   - ndvi_brighton_co.html
   - ndvi_brighton_co.ipynb
+* environment.yml
 
 # Project Objectives
 The primary objectives of this project are as follows:
@@ -73,6 +74,21 @@ To run the workflow, you will need the following tools/packages:
 * earthpy
 * numpy
 * matplotlib
+
+# Install the Earth Analytics Python Conda Environment
+To install the earth-analytics-python environment, you will need to follow these steps:
+
+Fork and clone a GitHub repository from https://github.com/earthlab/earth-analytics-python-env to your earth-analytics directory.
+This repository contains a file called environment.yml that contains the instructions to install the environment.
+
+1. In the Terminal, set your directory to the cloned earth-analytics-python-env dir using "cd" to change directories (e.g. "cd earth-analytics-python-env)".
+
+2. Once you are in the earth-analytics-python-env directory, you can create your environment. 
+To do this run: "conda env create -f environment.yml"
+
+3. When the environment is installed you can activate it using: "conda activate earth-analytics-python"
+
+Note that it takes time to install of the packages found in the earth-analytics-python environment as it needs to download and install each library. Also, you need to have internet access for this to run!
 
 # Data Formats and Types
 To apply this workflow, you need Landsat imagery data in GeoTIFF format. The Landsat imagery should contain the necessary bands, specifically the red and near-infrared (NIR) bands.
