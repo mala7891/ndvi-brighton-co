@@ -4,6 +4,7 @@
 ### Summer 2023 Capstone Project:
 
 # Visualizing Percent Change in NDVI Land Cover to Measure Vegetation Health in Brighton, Colorado
+[![DOI](https://zenodo.org/badge/637627095.svg)](https://zenodo.org/badge/latestdoi/637627095)
 
 # Introduction
 This README file provides an overview of a capstone project focused on enhancing the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. The project aims to analyze satellite data and create custom NDVI (Normalized Difference Vegetation Index) maps for five specific areas in Brighton. These maps will assist decision-makers in making informed choices about managing and preserving these properties to withstand the immediate effects of climate change.
@@ -103,6 +104,3 @@ You can explore other reputable data sources or satellite data repositories that
 
 # Conclusion
 This project aims to enhance the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. By analyzing satellite data and generating custom NDVI maps, decision-makers will gain valuable insights into vegetation density and health, promoting informed choices regarding sustainable landscape management and climate resilience. This project contributes to the broader goal of creating a healthier and more sustainable city by balancing conservation, resource use, and maintaining ecosystem services.
-
-# Citation
-[![DOI](https://zenodo.org/badge/637627095.svg)](https://zenodo.org/badge/latestdoi/637627095)
