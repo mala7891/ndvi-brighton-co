@@ -6,8 +6,7 @@
 # Visualizing Percent Change in NDVI Land Cover to Measure Vegetation Health in Brighton, Colorado
 [![DOI](https://zenodo.org/badge/637627095.svg)](https://zenodo.org/badge/latestdoi/637627095)
 
-Author: Matson Lakstigala
-Sponsors: John Tyll, Matt Forbis (City of Brighton, CO)
+Author: Matison Lakstigala
 
 # Introduction
 This README file provides an overview of a capstone project focused on enhancing the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. The project aims to analyze satellite data and create custom NDVI (Normalized Difference Vegetation Index) maps for five specific areas in Brighton. These maps will assist decision-makers in making informed choices about managing and preserving these properties to withstand the immediate effects of climate change.
