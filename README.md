@@ -15,10 +15,16 @@ This README file provides an overview of a capstone project focused on enhancing
 * README.md
 * LICENSE.txt
 * .gitignore file
+* environment.yml
 * "notebooks" folder containing:
   - ndvi_brighton_co.html
   - ndvi_brighton_co.ipynb
-* environment.yml
+* "shapefiles" folder containing:
+  - Ken_Mitchell_Open_Space_Shapefile
+  - Mattive_Open_Space_Shapefile
+  - Ergers_Pond_Shapefile
+  - Morgan_Smith_Shapefile
+  - Wagner_Mayhew_Shapefile
 
 # Project Objectives
 The primary objectives of this project are as follows:
@@ -33,14 +39,14 @@ The purpose of this repository is to provide a workflow for custom NDVI mapping 
 
 The goals and motivations for the project are to enhance the historical and ecological understanding of the landscape in the City of Brighton, Colorado. The project aims to enable decision-makers to make informed choices about how environmentally sensitive areas can withstand the immediate effects of climate change and promote sustainable landscape management.
 
-One unique contribution of this project repository to data science and earth/environmental science is the integration of various free and open source Python packages, such as rioxarray, geopandas, earthpy, numpy, and matplotlib, to perform the entire workflow from loading publicly available datasets such as Landsat imagery to generating custom NDVI maps and land cover classifications.
+One unique contribution of this project repository to data science and earth/environmental science is the integration of various free and open source Python packages to perform the entire workflow from loading publicly available datasets such as Landsat imagery to generating custom NDVI maps and land cover classifications.
 
 Someone would want to use the code/workflow presented in this repository for several reasons:
 
-* It provides a standardized and replicable approach for processing Landsat imagery and calculating NDVI, making it easier for researchers, horticulturists, and decision-makers to analyze vegetation dynamics.
+* It provides a standardized and replicable approach for processing Landsat imagery and calculating NDVI, making it easier for city decision-makers to analyze vegetation dynamics.
 * The workflow enables the classification of land cover based on NDVI values, allowing users to identify different vegetation types or land cover classes within the study area.
-* The calculation of percent change of land cover between two time periods provides insights into vegetation changes over time, aiding in monitoring and assessing the effects of environmental changes and climate resilience.
-* The workflow includes visualization capabilities, allowing users to generate maps and visual representations of NDVI, land cover classifications, and percent change of land cover, facilitating data interpretation and communication of findings.
+* The calculation of percent change of land cover for each decade provides insights into vegetation changes over time, aiding in monitoring and assessing the effects of environmental changes and climate resilience.
+* The workflow includes visualization capabilities, allowing users to generate maps, charts, and calculations of NDVI land cover classifications, and percent change of land cover, facilitating data interpretation and communication of findings.
 * Overall, this code/workflow is valuable for professionals working in the field of environmental science, horticulture, land management, or anyone interested in analyzing and monitoring vegetation dynamics using Landsat imagery.
 
 # Project Steps
@@ -51,11 +57,11 @@ Gather satellite imagery data for the selected areas in Brighton, Colorado. This
 # Preprocessing and Analysis: 
 Process the collected satellite data to remove any noise or artifacts and calculate the NDVI values for each pixel within the imagery.
 # NDVI Map Generation: 
-Utilize GIS software (such as ArcGIS, QGIS, or similar) to generate custom NDVI maps based on the processed satellite data. These maps will visually represent the vegetation density and health across the selected areas.
+Utilize ArcGIS Pro to generate custom NDVI maps based on the processed satellite data. These maps will visually represent the vegetation density and health across the selected areas.
 # Interpretation and Analysis:
 Interpret the NDVI maps and analyze the vegetation patterns, identifying areas with higher or lower vegetation density or potential ecological significance.
 # Documentation and Reporting: 
-Prepare a comprehensive report summarizing the findings, interpretations, and recommendations based on the NDVI analysis. Include relevant historical and ecological context to enhance decision-makers' understanding of the landscape conditions.
+Summarize the findings, interpretations, and recommendations based on the NDVI analysis. Include relevant historical and ecological context to enhance decision-makers' understanding of the landscape conditions.
 # Presentation and Discussion: 
 Present the findings to the appropriate stakeholders, including municipality officials, urban planners, and environmental experts. Facilitate a discussion on the management strategies and practices that balance conservation and resource use while maintaining ecosystem services and resilience to environmental changes.
 # Integration and Decision-making: 
@@ -64,19 +70,23 @@ Collaborate with decision-makers to integrate the acquired knowledge into munici
 # Project Deliverables
 The final deliverables for this project will include:
 
-* Custom NDVI maps: Maps depicting the vegetation density and health for the selected areas in Brighton, Colorado.
-* Comprehensive report: A detailed report summarizing the findings, interpretations, and recommendations based on the NDVI analysis. This report will also include historical and ecological context for the selected areas.
-* Presentation materials: Presentation slides or visual aids to communicate the project's key findings and recommendations to stakeholders and decision-makers.
+* Custom NDVI/maps: Maps depicting each study area and its features, and mapping positive or negative changes in vegetation density and health (Normalized Difference Vegetation Index) for the selected areas in Brighton, Colorado.
+* Summary Table: In a tabular format, presenting the findings, interpretations, and recommendations based on the NDVI analysis. 
+* Presentation materials: ArcGIS StoryMap will include historical and ecological context for the each of the selected areas to communicate the project's key findings and recommendations to a general audience.
 
 # Tools/Packages Required
 To run the workflow, you will need the following tools/packages:
 * Python (version 3.0 or higher)
 * os
-* rioxarray
-* geopandas
-* earthpy
-* numpy
+* glob
+* pathlib
 * matplotlib
+* numpy
+* earthpy
+* pandas
+* geopandas
+* xarray
+* rioxarray
 
 # Install the Earth Analytics Python Conda Environment
 To install the earth-analytics-python environment, you will need to follow these steps:
@@ -94,15 +104,11 @@ To do this run: "conda env create -f environment.yml"
 Note that it takes time to install of the packages found in the earth-analytics-python environment as it needs to download and install each library. Also, you need to have internet access for this to run!
 
 # Data Formats and Types
-To apply this workflow, you need Landsat imagery data in GeoTIFF format. The Landsat imagery should contain the necessary bands, specifically the red and near-infrared (NIR) bands.
+To apply this particular workflow, download the Landsat imagery folder located within this repository. The Landsat imagery should also contain the necessary bands for this analysis, specifically the red and near-infrared (NIR) bands.
 
-The workflow expects the Landsat imagery to be organized in a specific folder structure, where the Landsat GeoTIFF files are stored in a folder named "landsat_data".
+To replicate the download process, go to the USGS Earth Explorer website (https://earthexplorer.usgs.gov/) and create an account if necessary. Select the appropriate Landsat tiles and date range (May 1st, 1990 to August 31st, 2023) for the Landsat imagery. Choose the Landsat satellite and corresponding bands for the analysis. Download the Landsat imagery data in .TIF format. The workflow expects the Landsat imagery to be organized in a specific folder structure, where the Landsat .TIF files are stored in a folder inside "users/YOUR_NAME_HERE/earth-analytics/landsat_brighton".
 
-Make sure to select Landsat scenes that cover the study area and the desired time periods. The Landsat data should be available in GeoTIFF format and include the red and NIR bands necessary for NDVI calculation.
-
-Ensure that the Landsat imagery data has sufficient spatial and temporal resolution for analysis. Additionally, consider the cloud cover percentage and select scenes with minimal cloud cover to obtain accurate results.
-
-You can explore other reputable data sources or satellite data repositories that provide Landsat imagery data in GeoTIFF format suitable for NDVI analysis.
+For additional research, imagery data from other publicly available satellite datasets that provide data in .tif format suitable for NDVI analysis can be substituted . Make sure to select scenes that replicate the methods listed above and adjust the code during the import process accordingly.
 
 # Conclusion
 This project aims to enhance the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. By analyzing satellite data and generating custom NDVI maps, decision-makers will gain valuable insights into vegetation density and health, promoting informed choices regarding sustainable landscape management and climate resilience. This project contributes to the broader goal of creating a healthier and more sustainable city by balancing conservation, resource use, and maintaining ecosystem services.
