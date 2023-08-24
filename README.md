@@ -43,6 +43,7 @@ This README file provides an overview of a capstone project focused on enhancing
     - "AREA_NAME"_ndvi_2020.tif
     - "AREA_NAME"_ndvi_decades.tif
     - "AREA_NAME"_ndvi_yearly.gif
+    - "AREA_NAME" KDE.png"
 
 # Project Objectives
 The primary objectives of this project are as follows:
@@ -129,7 +130,7 @@ Note that it takes time to install of the packages found in the earth-analytics-
 # Inputs
 To apply this particular workflow, download the Landsat imagery folder using the link either located under the "inputs" or at: https://drive.google.com/file/d/1AlZ2P_mSEjlP0k6AHfXPzT4AAtmDqhHA/view?usp=drive_link
 
-To replicate the download process, go to the USGS Earth Explorer website (https://earthexplorer.usgs.gov/) and create an account if necessary. Select the appropriate Landsat tiles and date range (May 1st, 1990 to August 31st, 2023) for the Landsat imagery. Choose the Landsat satellite and corresponding bands for the analysis. Download the Landsat imagery data in .TIF format. 
+To replicate the download process, go to the USGS Earth Explorer website (https://earthexplorer.usgs.gov/) and create an account if necessary. Select the appropriate Landsat tiles and date range (May 1st, 1990 to August 31st, 2023) for the Landsat imagery. Filter imagery with less than 10 percent cloud cover, and choose the Landsat satellite (Tier 2, Collection 2) for the analysis. This downloads the Landsat imagery data and all of its bands in .TIF format. 
 
 The workflow expects the Landsat imagery to be organized in a specific folder structure, where the Landsat .TIF files AND shapefiles are stored in a folder inside "users/YOUR_NAME_HERE/earth-analytics/landsat_brighton". You can find the shapefiles for this code stored in this repository as .zip files. Make sure that the shapefiles and their metadata are located inside the same folder as your home directory.
 
