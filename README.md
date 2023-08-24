@@ -6,6 +6,8 @@
 # NDVI Analysis as a Tool for Evaluating Vegetation Health and Land Management in Brighton, CO
 [![DOI](https://zenodo.org/badge/637627095.svg)](https://zenodo.org/badge/latestdoi/637627095)
 
+Details of these findings are documented in an ArcGIS StoryMap available here: https://storymaps.arcgis.com/stories/9410607d90ff40b782a55d9f2a0f7a0c
+
 Author: Matison Lakstigala
 
 # Introduction
