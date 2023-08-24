@@ -20,6 +20,7 @@ This README file provides an overview of a capstone project focused on enhancing
 * "notebooks" folder containing:
   - ndvi_brighton_co.html
   - ndvi_brighton_co.ipynb
+  - ndvi_brighton_co.py
 * "shapefiles" folder containing:
   - Brighton_Boundary_Current Shapefile
   - Ken_Mitchell_Open_Space Shapefile
