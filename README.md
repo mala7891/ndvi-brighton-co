@@ -3,7 +3,7 @@
 ## CU Boulder Earth Data Analytics Professional Graduate Certificate
 ### Summer 2023 Capstone Project:
 
-# Visualizing Percent Change in NDVI Land Cover to Measure Vegetation Health in Brighton, Colorado
+# NDVI Analysis as a Tool for Evaluating Vegetation Health and Land Management in Brighton, CO
 [![DOI](https://zenodo.org/badge/637627095.svg)](https://zenodo.org/badge/latestdoi/637627095)
 
 Author: Matison Lakstigala
@@ -16,15 +16,33 @@ This README file provides an overview of a capstone project focused on enhancing
 * LICENSE.txt
 * .gitignore file
 * environment.yml
+* oryx-build-commands.txt
 * "notebooks" folder containing:
   - ndvi_brighton_co.html
   - ndvi_brighton_co.ipynb
 * "shapefiles" folder containing:
-  - Ken_Mitchell_Open_Space_Shapefile
-  - Mattive_Open_Space_Shapefile
-  - Ergers_Pond_Shapefile
-  - Morgan_Smith_Shapefile
-  - Wagner_Mayhew_Shapefile
+  - Brighton_Boundary_Current Shapefile
+  - Ken_Mitchell_Open_Space Shapefile
+  - Mattive_Open_Space Shapefile
+  - Ergers_Pond Shapefile
+  - Morgan_Smith Shapefile
+  - Wagner_Mayhew_Property Shapefile
+* "inputs" folder
+  - an .html to link you to a Google Drive folder containing raw Landsat data downloaded from USGS EarthExplorer
+* "outputs" folder
+  - brighton_boundary
+  - ergers_pond
+  - ken_mitchell_open_space
+  - mattive_open_space
+  - morgan_smith_nature_area
+  - wagner_mayhew_property
+    * inside each folder:
+    - "AREA_NAME"_ndvi_1990.tif
+    - "AREA_NAME"_ndvi_2000.tif
+    - "AREA_NAME"_ndvi_2010.tif
+    - "AREA_NAME"_ndvi_2020.tif
+    - "AREA_NAME"_ndvi_decades.tif
+    - "AREA_NAME"_ndvi_yearly.gif
 
 # Project Objectives
 The primary objectives of this project are as follows:
@@ -78,15 +96,20 @@ The final deliverables for this project will include:
 To run the workflow, you will need the following tools/packages:
 * Python (version 3.0 or higher)
 * os
+* earthpy
 * glob
-* pathlib
+* geopandas
+* imageio
 * matplotlib
 * numpy
-* earthpy
 * pandas
-* geopandas
-* xarray
+* pathlib
 * rioxarray
+* seaborn
+* shapely
+* time
+* xarray
+
 
 # Install the Earth Analytics Python Conda Environment
 To install the earth-analytics-python environment, you will need to follow these steps:
@@ -103,12 +126,27 @@ To do this run: "conda env create -f environment.yml"
 
 Note that it takes time to install of the packages found in the earth-analytics-python environment as it needs to download and install each library. Also, you need to have internet access for this to run!
 
-# Data Formats and Types
-To apply this particular workflow, download the Landsat imagery folder located within this repository. The Landsat imagery should also contain the necessary bands for this analysis, specifically the red and near-infrared (NIR) bands.
+# Inputs
+To apply this particular workflow, download the Landsat imagery folder using the link either located under the "inputs" or at: https://drive.google.com/file/d/1AlZ2P_mSEjlP0k6AHfXPzT4AAtmDqhHA/view?usp=drive_link
 
-To replicate the download process, go to the USGS Earth Explorer website (https://earthexplorer.usgs.gov/) and create an account if necessary. Select the appropriate Landsat tiles and date range (May 1st, 1990 to August 31st, 2023) for the Landsat imagery. Choose the Landsat satellite and corresponding bands for the analysis. Download the Landsat imagery data in .TIF format. The workflow expects the Landsat imagery to be organized in a specific folder structure, where the Landsat .TIF files are stored in a folder inside "users/YOUR_NAME_HERE/earth-analytics/landsat_brighton".
+To replicate the download process, go to the USGS Earth Explorer website (https://earthexplorer.usgs.gov/) and create an account if necessary. Select the appropriate Landsat tiles and date range (May 1st, 1990 to August 31st, 2023) for the Landsat imagery. Choose the Landsat satellite and corresponding bands for the analysis. Download the Landsat imagery data in .TIF format. 
 
-For additional research, imagery data from other publicly available satellite datasets that provide data in .tif format suitable for NDVI analysis can be substituted . Make sure to select scenes that replicate the methods listed above and adjust the code during the import process accordingly.
+The workflow expects the Landsat imagery to be organized in a specific folder structure, where the Landsat .TIF files AND shapefiles are stored in a folder inside "users/YOUR_NAME_HERE/earth-analytics/landsat_brighton". You can find the shapefiles for this code stored in this repository as .zip files. Make sure that the shapefiles and their metadata are located inside the same folder as your home directory.
+
+# Outputs
+Values:
+* Decadal Average Percent of Change in NDVI: 6 study areas (5 PCA's + Brighton) and across 3 decades for a total of 24 percentage values, printed as in-line table.
+
+Figures:
+* KDE Frequency of NDVI Values by Decade: 5 kinetic depth effect (KDE) figures for each study area across 4 decades + and 1 for all decades, for a total of 6 in-line figures, downloadable as .png images (if desired).
+* Annual Change in NDVI: A .gif is generated for each study area (6) cycling through 34 images (at most) for a total of 6 .gif files.
+* Decadal Average NDVI Subplots: Average NDVI for 4 decades displayed as four-figure subplots clipped to each clipped to 5 study areas + Brighton for a total of 6 .tif subplot figures.
+
+Raster Images:
+* Decadal Average NDVI Composites:  A mean composited NDVI image using the supplied RED and NIR bands calculated for each decade (4) for 6 study areas for a total of 24 .tif images.
+
+# Next Steps
+For additional research, imagery can be substituted with different Landsat data downloaded with EarthExplorer covering different areas. Just upload the shapefiles within your area you wish to analyze during the import process accordingly and the same outputs will be created! Runtime usually takes about 10-15 minutes, depending on your device's processing power.
 
 # Conclusion
 This project aims to enhance the historical and ecological understanding of environmentally sensitive areas within the City of Brighton, Colorado. By analyzing satellite data and generating custom NDVI maps, decision-makers will gain valuable insights into vegetation density and health, promoting informed choices regarding sustainable landscape management and climate resilience. This project contributes to the broader goal of creating a healthier and more sustainable city by balancing conservation, resource use, and maintaining ecosystem services.
